@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Contest Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dance Contest Registration Form</h1>
+        <p style="text-align: center; font-size: 18px; color: #666;">Complete the form below to register for the contest. We are excited to see your performance!</p>
+
+        <form action="[Insert Your Form Submission URL]" method="post" enctype="multipart/form-data">
+
+            <!-- Personal Information Section -->
+            <h3>Personal Information</h3>
+            <label for="fullName">Full Name (First Name, Last Name):</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Dance Information Section -->
+            <h3>Dance Information</h3>
+            <label for="danceStyles">Dance Style(s) You Will Perform:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="hiphop" name="danceStyles" value="Hip-Hop"> <label for="hiphop">Hip-Hop</label>
+                <input type="checkbox" id="ballet" name="danceStyles" value="Ballet"> <label for="ballet">Ballet</label>
+                <input type="checkbox" id="contemporary" name="danceStyles" value="Contemporary"> <label for="contemporary">Contemporary</label>
+                <input type="checkbox" id="jazz" name="danceStyles" value="Jazz"> <label for="jazz">Jazz</label>
+                <input type="checkbox" id="salsa" name="danceStyles" value="Salsa"> <label for="salsa">Salsa</label>
+                <input type="checkbox" id="other" name="danceStyles" value="Other"> <label for="other">Other (Please Specify)</label>
+            </div>
+
+            <label for="teamName">Team Name (If applicable):</label>
+            <input type="text" id="teamName" name="teamName">
+
+            <label for="performanceType">Solo or Group Performance:</label>
+            <select id="performanceType" name="performanceType" required>
+                <option value="solo">Solo</option>
+                <option value="group">Group</option>
+            </select>
+
+            <label for="numPerformers">Number of Performers (If Group):</label>
+            <input type="number" id="numPerformers" name="numPerformers">
+
+            <label for="routineDescription">Brief Description of Your Dance Routine:</label>
+            <textarea id="routineDescription" name="routineDescription" rows="4" required></textarea>
+
+            <!-- Video Submission Section -->
+            <h3>Video Submission</h3>
+            <label for="danceVideo">Dance Demo Video (if required):</label>
+            <input type="file" id="danceVideo" name="danceVideo" accept=".mp4, .avi, .mov" required>
+
+            <!-- Agreement Section -->
+            <h3>Agreement and Consent</h3>
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
+            <label for="terms">I agree to the contest rules and consent to the use of my video and name for promotional purposes.</label><br><br>
+
+            <label for="signature">Signature (Type Full Name as Signature):</label>
+            <input type="text" id="signature" name="signature" required>
+
+            <input type="submit" value="Submit Registration" class="submit-button">
+        </form>
+
+        <div class="form-footer">
+            <p>By submitting the form, you agree to our <a href="#">Terms & Conditions</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
